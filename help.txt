@@ -1,0 +1,3 @@
+django-admin startproject <PROJECTNAME>
+
+.gitignore for django --> google
