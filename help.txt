@@ -1,3 +1,5 @@
 django-admin startproject <PROJECTNAME>
 
 .gitignore for django --> google
+
+py manage.py runserver --> to run the server, by default it's in debug mode. To change - settings.py DEBUG=False
