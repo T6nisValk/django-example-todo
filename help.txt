@@ -7,3 +7,14 @@ py manage.py runserver --> to run the server, by default it's in debug mode. To 
 py manage.py migrate --> to update/create databases, migrate changes
 
 py manage.py createsuperuser --> create an admin user
+
+py manage.py startapp < NAME > --> create app --> add to INSTALLED_APPS
+
+# accounts/ login/ [name='login']
+# accounts/ logout/ [name='logout']
+# accounts/ password_change/ [name='password_change']
+# accounts/ password_change/done/ [name='password_change_done']
+# accounts/ password_reset/ [name='password_reset']
+# accounts/ password_reset/done/ [name='password_reset_done']
+# accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
+# accounts/ reset/done/ [name='password_reset_complete']

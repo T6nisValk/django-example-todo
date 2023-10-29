@@ -1,14 +1,18 @@
 from django.shortcuts import render, redirect
 from .models import ToDoList
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
+@login_required
 def home(request):
-    lists = ToDoList.objects.all()
+    lists = ToDoList.objects.filter(user=request.user)
+
     return render(request, "lists.html", context={"lists": lists})
 
 
+@login_required
 def items_list(request, pk):
     the_list = ToDoList.objects.get(pk=pk)
     items = the_list.todoitem_set.all()
